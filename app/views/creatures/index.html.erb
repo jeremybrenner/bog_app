@@ -1,0 +1,11 @@
+<% @creatures.each do |creature| %>
+	<div>
+		<h2>Name: <%= creature.name %></h2>
+		<p>Description: <%= creature.description %></p>
+	</div>
+	<%= button_to "Delete", creature, method: :delete %>
+<% end %>
+<br>
+<form action="/creatures/new"> 
+	<button>MAKE A NEW CREATURE!</button>
+</form>
